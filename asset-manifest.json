@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/aivgithub/static/css/main.073c9b0a.css",
-    "main.js": "/aivgithub/static/js/main.06aa0760.js",
-    "static/js/787.e080a2d3.chunk.js": "/aivgithub/static/js/787.e080a2d3.chunk.js",
-    "static/media/logo.svg": "/aivgithub/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/aivgithub/index.html",
-    "main.073c9b0a.css.map": "/aivgithub/static/css/main.073c9b0a.css.map",
-    "main.06aa0760.js.map": "/aivgithub/static/js/main.06aa0760.js.map",
-    "787.e080a2d3.chunk.js.map": "/aivgithub/static/js/787.e080a2d3.chunk.js.map"
+    "main.css": "/AivGitHub/aivgithub.github.io.git/static/css/main.073c9b0a.css",
+    "main.js": "/AivGitHub/aivgithub.github.io.git/static/js/main.aeef8cac.js",
+    "static/js/787.e080a2d3.chunk.js": "/AivGitHub/aivgithub.github.io.git/static/js/787.e080a2d3.chunk.js",
+    "static/media/logo.svg": "/AivGitHub/aivgithub.github.io.git/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/AivGitHub/aivgithub.github.io.git/index.html",
+    "main.073c9b0a.css.map": "/AivGitHub/aivgithub.github.io.git/static/css/main.073c9b0a.css.map",
+    "main.aeef8cac.js.map": "/AivGitHub/aivgithub.github.io.git/static/js/main.aeef8cac.js.map",
+    "787.e080a2d3.chunk.js.map": "/AivGitHub/aivgithub.github.io.git/static/js/787.e080a2d3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.06aa0760.js"
+    "static/js/main.aeef8cac.js"
   ]
 }
