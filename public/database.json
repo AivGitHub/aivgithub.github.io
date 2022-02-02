@@ -1,0 +1,65 @@
+{
+  "main": {
+    "brand": "Ivan Koldakov",
+    "name": "Ivan Koldakov",
+    "description": "Developer. Mostly Web, but who knows..",
+    "profile_image": "profile_image.jpg",
+    "bio": "Developer. Mostly Web (Backend), but who knows..",
+    "email": "coldie322@gmail.com",
+    "phone": "+7-913-914-??-??",
+    "address": {
+      "city": "Novosibisrk"
+    },
+    "cv_download_link": "./files/cv.pdf",
+    "website": "https://aivgithub.github.com",
+    "social": [
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/aiv",
+        "className": "fa fa-linkedin"
+      },
+      {
+        "name": "github",
+        "url": "http://github.com/AivGitHub",
+        "className": "fa fa-github"
+      }
+    ],
+    "experience": [
+      {
+        "name": "Atom Security, LLC",
+        "from": "2017 April 1st",
+        "to": "2022 January 31st",
+        "position": "Lead Developer",
+        "duties": [
+          "Develop new features",
+          "Design and develop new Django applications",
+          "Cover code with unit tests",
+          "Debug, maintain and improve existing software",
+          "Integrate with Active Directory",
+          "Track and resolve internal errors"
+        ]
+      },
+      {
+        "name": "Novaris Techonologies, LLC",
+        "from": "2016 October 1st",
+        "to": "2017 March 31st",
+        "position": "Java Developer",
+        "duties": [
+          "Develop an emergency response system using Java GWT",
+          "Debug, maintain and improve existing software"
+        ]
+      },
+      {
+        "name": "Academ Media, LLC",
+        "from": "2015 July 1st",
+        "to": "2015 august 31st",
+        "position": "Web Developer",
+        "duties": [
+          "Develop mobile applications using javascript framework7, jQuery and jade",
+          "Communicate with designers for efficient interfaces"
+        ]
+      }
+    ]
+  }
+}
+
