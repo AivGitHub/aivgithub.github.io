@@ -7,7 +7,9 @@ function Home(props) {
   var experience = '';
   var data = props.jsonData;
 
-  var profileImage = 'images/' + data.profile_image;
+  if (data && data.profile_image) {
+    var profileImage = 'images/' + data.profile_image;
+  }
 
   if (data && data.experience){
     experience = data.experience.map(function(experience, i){
