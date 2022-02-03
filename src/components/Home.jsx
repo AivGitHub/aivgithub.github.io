@@ -11,7 +11,7 @@ function Home(props) {
 
   if (data && data.experience){
     experience = data.experience.map(function(experience, i){
-      return <div className="border-bottom" key={"outer-home-map" + i}>
+      return <div className="border-bottom-3" key={"outer-home-map" + i}>
         <h3>{experience.name}</h3>
           <p className="info"><em className="date"> {experience.from} - {experience.to}</em></p>
           <h5>{experience.position}</h5>
@@ -38,7 +38,7 @@ function Home(props) {
             <p>
                 {data.description}
             </p>
-            <h2>My working experience:</h2>
+            <h2 className="border-bottom-5 fit-content">My working experience:</h2>
             {experience}
           </div>
         </div>

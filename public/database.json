@@ -1,6 +1,6 @@
 {
   "main": {
-    "brand": "Ivan Koldakov",
+    "brand": "Ivan Koldakov (Pre-Beta)",
     "name": "Ivan Koldakov",
     "description": "Developer. Mostly Web, but who knows..",
     "profile_image": "profile_image.jpg",
@@ -29,7 +29,7 @@
         "name": "Atom Security, LLC",
         "from": "2017 April 1st",
         "to": "2022 January 31st",
-        "position": "Lead Developer",
+        "position": "Lead Developer (Python)",
         "duties": [
           "Develop new features",
           "Design and develop new Django applications",
