@@ -17,9 +17,9 @@ function Navigation(props) {
             <li className="nav-item">
               <a className="nav-link active" href="/">Home</a>
             </li>
-{/*             <li className="nav-item"> */}
-{/*               <a className="nav-link" href="/contact">Contact</a> */}
-{/*             </li> */}
+            <li className="nav-item">
+              <a className="nav-link" href="/contacts">Contacts</a>
+            </li>
 {/*             <li className="nav-item"> */}
 {/*               <a className="nav-link" href="/blog">Blog</a> */}
 {/*             </li> */}

@@ -9,10 +9,11 @@ import {
   Navigation,
   Footer,
   Home,
-  Contact,
+  Contacts,
   Blog,
   Posts,
   Post,
+  NotFound,
 } from "./components";
 
 
@@ -28,12 +29,25 @@ class App extends Component {
   }
 
   setData = () => {
+//    For testing
+//    setTimeout(() => {
+//
+//    fetch('/database.json', {})
+//      .then(dataJSON => dataJSON.json())
+//      .then(dataJSON => {
+//        this.setState({ data: dataJSON.main, isLoading: false });
+//      })
+//      .catch(e => console.log(e));
+//
+//    }, 3000);
+
     fetch('/database.json', {})
       .then(dataJSON => dataJSON.json())
       .then(dataJSON => {
         this.setState({ data: dataJSON.main, isLoading: false });
       })
       .catch(e => console.log(e));
+
   };
 
   componentDidMount(){
@@ -43,17 +57,25 @@ class App extends Component {
   render() {
     const { data, isLoading } = this.state;
 
+    // Dirty hack
     if (isLoading) {
-      // Dirty hack
-      return null;
+      return(
+        <div className="vh-100 d-flex justify-content-center align-items-center">
+          <h1>Loading..</h1>
+          <div className="spinner-border" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      )
     }
 
     return(
       <Router>
         <Navigation brand={data.brand} />
         <Routes>
+          <Route path="*" element={<NotFound />} />
           <Route path="/" element={<Home jsonData={data} />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contacts" element={<Contacts />} />
           <Route path="/blog" element={<Blog />}>
             <Route path="" element={<Posts />} />
             <Route path=":postSlug" element={<Post />} />
