@@ -5,8 +5,10 @@
     "description": "Developer. Mostly Web, but who knows..",
     "profile_image": "profile_image.jpg",
     "bio": "Developer. Mostly Web (Backend), but who knows..",
-    "email": "coldie322@gmail.com",
-    "phone": "+7-913-914-??-??",
+    "contacts": {
+      "email": "coldie322@gmail.com",
+      "phone": "+7-913-914-??-??"
+    },
     "address": {
       "city": "Novosibisrk"
     },

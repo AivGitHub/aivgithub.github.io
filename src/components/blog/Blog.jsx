@@ -1,15 +1,22 @@
-import React from "react";
+import React, { Component } from "react";
 import { Outlet } from "react-router-dom";
 
-function Blog() {
-  return (
-    <div className="main-container blog">
-      <div className="container">
-        <h1 className="text-center mt-5">Blog page</h1>
-        <Outlet />
+
+class Blog extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div className="main-container blog">
+        <div className="container">
+          <h1 className="text-center mt-5">Blog page</h1>
+          <Outlet />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default Blog;

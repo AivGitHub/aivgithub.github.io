@@ -75,10 +75,10 @@ class App extends Component {
         <Routes>
           <Route path="*" element={<NotFound />} />
           <Route path="/" element={<Home jsonData={data} />} />
-          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/contacts" element={<Contacts contacts={data.contacts} />} />
           <Route path="/blog" element={<Blog />}>
             <Route path="" element={<Posts />} />
-            <Route path=":postSlug" element={<Post />} />
+            <Route path=":slug" element={<Post />} />
           </Route>
         </Routes>
         <Footer brand={data.brand} />
