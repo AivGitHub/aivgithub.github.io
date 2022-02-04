@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Component } from "react";
+import React, { Component } from "react";
 
 import './Home.css';
 
@@ -7,15 +7,15 @@ class Home extends Component {
   constructor(props) {
     super(props);
 
-    this.experience = '';
+    this.experiences = '';
     this.data = props.jsonData;
 
     if (this.data && this.data.profile_image) {
       this.profileImage = 'images/' + this.data.profile_image;
     }
 
-    if (this.data && this.data.experience){
-      this.experience = this.data.experience.map(function(experience, i){
+    if (this.data && this.data.experiences){
+      this.experiences = this.data.experiences.map(function(experience, i){
         return <div className="border-bottom-3" key={"outer-home-map" + i}>
           <h3>{experience.name}</h3>
           <p className="info"><em className="date"> {experience.from} - {experience.to}</em></p>
@@ -46,7 +46,7 @@ class Home extends Component {
                 {this.data.description}
               </p>
               <h2 className="border-bottom-5 fit-content">My working experience:</h2>
-              {this.experience}
+              {this.experiences}
             </div>
           </div>
         </div>

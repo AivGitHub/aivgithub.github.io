@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { HashRouter as Router, NavLink, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -28,6 +28,10 @@ class App extends Component {
 
   }
 
+  componentDidMount(){
+    this.setData();
+  }
+
   setData = () => {
 //    For testing
 //    setTimeout(() => {
@@ -50,10 +54,6 @@ class App extends Component {
 
   };
 
-  componentDidMount(){
-    this.setData();
-  }
-
   render() {
     const { data, isLoading } = this.state;
 
@@ -75,7 +75,11 @@ class App extends Component {
         <Routes>
           <Route path="*" element={<NotFound />} />
           <Route path="/" element={<Home jsonData={data} />} />
-          <Route path="/contacts" element={<Contacts contacts={data.contacts} />} />
+          <Route
+            path="/contacts"
+            element={<Contacts contacts={data.contacts}
+            socialNetworks={data.social_networks}/>}
+          />
           <Route path="/blog" element={<Blog />}>
             <Route path="" element={<Posts />} />
             <Route path=":slug" element={<Post />} />

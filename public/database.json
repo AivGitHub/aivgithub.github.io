@@ -5,16 +5,24 @@
     "description": "Developer. Mostly Web, but who knows..",
     "profile_image": "profile_image.jpg",
     "bio": "Developer. Mostly Web (Backend), but who knows..",
-    "contacts": {
-      "email": "coldie322@gmail.com",
-      "phone": "+7-913-914-??-??"
-    },
+    "contacts": [
+      {
+        "name": "phone",
+        "value": "+7-913-914-??-??",
+        "description": ""
+      },
+      {
+        "name": "email",
+        "value": "coldie322@gmail.com",
+        "description": ""
+      }
+    ],
     "address": {
       "city": "Novosibisrk"
     },
     "cv_download_link": "./files/cv.pdf",
     "website": "https://aivgithub.github.com",
-    "social": [
+    "social_networks": [
       {
         "name": "linkedin",
         "url": "https://www.linkedin.com/in/aiv",
@@ -26,7 +34,7 @@
         "className": "fa fa-github"
       }
     ],
-    "experience": [
+    "experiences": [
       {
         "name": "Atom Security, LLC",
         "from": "2017 April 1st",
