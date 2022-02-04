@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Posts() {
   return (
     <div className="main-container posts">
       <div className="container">
-        <Link to="/blog/this-is-a-post-title">
+        <NavLink to="/blog/this-is-a-post-title">
           <div className="row align-items-center my-5">
             <div className="col-lg-7">
               <img
@@ -21,7 +21,7 @@ function Posts() {
               </p>
             </div>
           </div>
-        </Link>
+        </NavLink>
       </div>
     </div>
   );

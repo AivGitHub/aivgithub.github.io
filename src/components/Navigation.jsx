@@ -8,27 +8,25 @@ function Navigation(props) {
   return (
     <nav className="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">{props.brand}</a>
+        <NavLink className="navbar-brand" to="/">{props.brand}</NavLink>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="collapsibleNavbar">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link active" href="/">Home</a>
+              <NavLink to="/" className="nav-link">Home</NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/contacts">Contacts</a>
+              <NavLink to="/contacts" className="nav-link">Contacts</NavLink>
             </li>
 {/*             <li className="nav-item"> */}
-{/*               <a className="nav-link" href="/blog">Blog</a> */}
+{/*               <NavLink to="/blog" className="nav-link">Blog</NavLink> */}
 {/*             </li> */}
 {/*             <li className="nav-item dropdown"> */}
 {/*               <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a> */}
 {/*               <ul className="dropdown-menu"> */}
-{/*                 <li><a className="dropdown-item" href="#">Link</a></li> */}
-{/*                 <li><a className="dropdown-item" href="#">Another link</a></li> */}
-{/*                 <li><a className="dropdown-item" href="#">A third link</a></li> */}
+{/*                 <li><NavLink to="/link" className="dropdown-item">Link</NavLink></li> */}
 {/*               </ul> */}
 {/*             </li> */}
           </ul>
