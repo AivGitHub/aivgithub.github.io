@@ -14,6 +14,7 @@ import {
   Posts,
   Post,
   NotFound,
+  About,
 } from "./components";
 
 
@@ -57,6 +58,12 @@ class App extends Component {
   render() {
     const { data, isLoading } = this.state;
 
+    var systemData = {
+      "version": data.version,
+      "designed_by": data.designed_by,
+      "brand": data.brand
+    }
+
     // Dirty hack
     if (isLoading) {
       return(
@@ -84,6 +91,7 @@ class App extends Component {
             <Route path="" element={<Posts />} />
             <Route path=":slug" element={<Post />} />
           </Route>
+          <Route path="/about" element={<About systemData={systemData} />} />
         </Routes>
         <Footer brand={data.brand} version={data.version}/>
       </Router>

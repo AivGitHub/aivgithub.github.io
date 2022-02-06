@@ -1,6 +1,7 @@
 {
   "main": {
     "version": "0.0.1b",
+    "designed_by": "John Aiv",
     "brand": "Ivan Koldakov (Pre-Beta)",
     "name": "Ivan Koldakov",
     "description": "Developer. Mostly Web, but who knows..",
