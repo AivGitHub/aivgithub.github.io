@@ -14,9 +14,9 @@ class Footer extends Component {
   render() {
     return (
       <div className="footer">
-        <footer className="py-1 bg-dark fixed-bottom">
+        <footer className="py-1 bg-light fixed-bottom">
           <div className="container">
-            <p className="m-0 text-center text-white">
+            <p className="m-0 text-center">
               Copyright &copy; {this.brand} 2022. Version: {this.version}
             </p>
           </div>

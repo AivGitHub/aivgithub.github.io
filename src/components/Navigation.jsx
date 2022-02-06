@@ -11,10 +11,15 @@ class Navigation extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+      <nav className="navbar navbar-expand-sm bg-white navbar-light fixed-top">
         <div className="container-fluid">
           <NavLink className="navbar-brand" to="/">{this.props.brand}</NavLink>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <button
+            className="navbar-toggler navbar-light"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar"
+          >
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="collapsibleNavbar">
