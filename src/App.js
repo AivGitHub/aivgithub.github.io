@@ -85,7 +85,7 @@ class App extends Component {
             <Route path=":slug" element={<Post />} />
           </Route>
         </Routes>
-        <Footer brand={data.brand} />
+        <Footer brand={data.brand} version={data.version}/>
       </Router>
   )};
 }
