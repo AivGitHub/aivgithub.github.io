@@ -10,7 +10,7 @@ class Navigation extends Component {
 
     this.brand = props.navigationData.brand;
     this.socialNetworks = props.navigationData.socialNetworks.map(function(socialNetwork, i){
-      return <div className="border-bottom-2" key={"outer-home-map" + i}>
+      return <div key={"outer-home-map" + i}>
         <h4>
           {socialNetwork.name}: <a href={socialNetwork.url} target="_blank">{socialNetwork.url}</a>
         </h4>

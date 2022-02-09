@@ -7,3 +7,4 @@ export { default as Blog } from "./blog/Blog";
 export { default as Posts } from "./blog/Posts";
 export { default as Post } from "./blog/Post";
 export { default as About } from "./About";
+export { default as Background } from "./Background";

@@ -11,7 +11,7 @@ class Home extends Component {
     this.profileImage = 'images/' + this.data.profile_image;
 
     this.experiences = this.data.experiences.map(function(experience, i) {
-      return <div className="border-bottom-3" key={"outer-home-map" + i}>
+      return <div className="border-bottom-1" key={"outer-home-map" + i}>
         <h3>{experience.name}</h3>
         <p className="info"><em className="date"> {experience.from} - {experience.to}</em></p>
         <h5>{experience.position}</h5>
@@ -25,22 +25,30 @@ class Home extends Component {
   render() {
     return (
       <div className="main-container home">
-        <div className="container">
-          <div className="row align-items-center my-5">
-            <div className="col-lg-5">
+        <div className="container d-flex justify-content-center">
+          <div className="row">
+            <div className="row">
+              <div className="col">
+                <div className="header-greetings">
+                  <h1 className="font-size-44">Hello, I'm <span className="text-red">{this.data.name}</span></h1>
+                  <p className="font-size-36">
+                    {this.data.description}
+                  </p>
+                </div>
+              </div>
+              <div className="col">
               <img
-                className="img-fluid rounded mb-4 mb-lg-0"
+                className="img-fluid rounded-circle"
                 src={this.profileImage}
                 alt="Profile image"
               />
+              </div>
             </div>
-            <div className="col-lg-7">
-              <h1 className="font-weight-light">Hello, I'm {this.data.name}</h1>
-              <p>
-                {this.data.description}
-              </p>
-              <h2 className="border-bottom-5 fit-content">My working experience:</h2>
-              {this.experiences}
+            <div className="row d-flex justify-content-center">
+              <div className="col">
+                <h2>My working experience:</h2>
+                {this.experiences}
+              </div>
             </div>
           </div>
         </div>

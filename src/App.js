@@ -15,6 +15,7 @@ import {
   Post,
   NotFound,
   About,
+  Background,
 } from "./components";
 
 

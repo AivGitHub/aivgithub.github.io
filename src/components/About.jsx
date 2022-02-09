@@ -10,7 +10,7 @@ class About extends Component {
 
     this.about = Object.keys(this.props.systemData).map(function(key, i) {
       return (
-        <div className="border-bottom-3 fit-content" key={key + "_" + i}>
+        <div key={key + "_" + i}>
           <h3>{key}: {systemData[key]}</h3>
         </div>
     )});
