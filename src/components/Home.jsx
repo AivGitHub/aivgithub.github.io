@@ -7,25 +7,19 @@ class Home extends Component {
   constructor(props) {
     super(props);
 
-    this.experiences = '';
     this.data = props.jsonData;
+    this.profileImage = 'images/' + this.data.profile_image;
 
-    if (this.data && this.data.profile_image) {
-      this.profileImage = 'images/' + this.data.profile_image;
-    }
-
-    if (this.data && this.data.experiences) {
-      this.experiences = this.data.experiences.map(function(experience, i) {
-        return <div className="border-bottom-3" key={"outer-home-map" + i}>
-          <h3>{experience.name}</h3>
-          <p className="info"><em className="date"> {experience.from} - {experience.to}</em></p>
-          <h5>{experience.position}</h5>
-            {experience.duties.map((duty, j) => {
-              return (<li key={"inner-home-map-" + j}>{duty}</li>)
-            })}
-          </div>
-        });
-      }
+    this.experiences = this.data.experiences.map(function(experience, i) {
+      return <div className="border-bottom-3" key={"outer-home-map" + i}>
+        <h3>{experience.name}</h3>
+        <p className="info"><em className="date"> {experience.from} - {experience.to}</em></p>
+        <h5>{experience.position}</h5>
+          {experience.duties.map((duty, j) => {
+            return (<li key={"inner-home-map-" + j}>{duty}</li>)
+          })}
+        </div>
+    });
   }
 
   render() {

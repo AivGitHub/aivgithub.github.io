@@ -64,6 +64,22 @@ class App extends Component {
       "brand": data.brand
     }
 
+    var footerData = {
+      "socialNetworks": data.social_networks,
+      "version": data.version,
+      "brand": data.brand
+    }
+
+    var contactsData = {
+      "contacts": data.contacts,
+      "socialNetworks": data.social_networks
+    }
+
+    var navigationData = {
+      "socialNetworks": data.social_networks,
+      "brand": data.brand,
+    }
+
     // Dirty hack
     if (isLoading) {
       return(
@@ -78,14 +94,13 @@ class App extends Component {
 
     return(
       <Router>
-        <Navigation brand={data.brand} />
+        <Navigation navigationData={navigationData} />
         <Routes>
           <Route path="*" element={<NotFound />} />
           <Route path="/" element={<Home jsonData={data} />} />
           <Route
             path="/contacts"
-            element={<Contacts contacts={data.contacts}
-            socialNetworks={data.social_networks}/>}
+            element={<Contacts contactsData={contactsData} />}
           />
           <Route path="/blog" element={<Blog />}>
             <Route path="" element={<Posts />} />
@@ -93,7 +108,7 @@ class App extends Component {
           </Route>
           <Route path="/about" element={<About systemData={systemData} />} />
         </Routes>
-        <Footer brand={data.brand} version={data.version}/>
+        <Footer footerData={footerData}/>
       </Router>
   )};
 }

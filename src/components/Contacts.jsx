@@ -4,29 +4,23 @@ import React, { Component } from "react";
 class Contacts extends Component {
   constructor(props) {
     super(props);
+
+    this.contacts = props.contactsData.contacts.map(function(contact, i){
+      return <div className="border-bottom-2" key={"outer-home-map" + i}>
+        <h4>{contact.name}: {contact.value}</h4>
+        </div>
+      });
+
+    this.socialNetworks = props.contactsData.socialNetworks.map(function(socialNetwork, i){
+      return <div className="border-bottom-2" key={"outer-home-map" + i}>
+        <h4>
+          {socialNetwork.name}: <a href={socialNetwork.url} target="_blank">{socialNetwork.url}</a>
+        </h4>
+        </div>
+      });
   }
 
   render(){
-    if (this.props && this.props.contacts){
-      this.contacts = this.props.contacts.map(function(contact, i){
-        return <div className="border-bottom-2" key={"outer-home-map" + i}>
-          <h4>{contact.name}: {contact.value}</h4>
-          </div>
-        });
-    }
-
-    if (this.props && this.props.socialNetworks){
-      this.socialNetworks = this.props.socialNetworks.map(function(socialNetwork, i){
-        return <div className="border-bottom-2" key={"outer-home-map" + i}>
-{/*           TODO: Add later */}
-{/*           <i className={socialNetwork.className}></i> */}
-          <h4>
-            {socialNetwork.name}: <a href={socialNetwork.url} target="_blank">{socialNetwork.url}</a>
-          </h4>
-          </div>
-        });
-    }
-
     return (
       <div className="main-container contacts">
         <div className="container">

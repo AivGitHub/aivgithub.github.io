@@ -7,8 +7,10 @@ class Footer extends Component {
   constructor(props) {
     super(props);
 
-    this.brand = props.brand;
-    this.version = props.version;
+    this.brand = props.footerData.brand;
+    this.version = props.footerData.version;
+
+    this.socialNetworks = props.footerData.socialNetworks;
   }
 
   render() {

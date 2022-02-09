@@ -7,13 +7,22 @@ import './Navigation.css';
 class Navigation extends Component {
   constructor(props) {
     super(props);
+
+    this.brand = props.navigationData.brand;
+    this.socialNetworks = props.navigationData.socialNetworks.map(function(socialNetwork, i){
+      return <div className="border-bottom-2" key={"outer-home-map" + i}>
+        <h4>
+          {socialNetwork.name}: <a href={socialNetwork.url} target="_blank">{socialNetwork.url}</a>
+        </h4>
+        </div>
+      });
   }
 
   render() {
     return (
       <nav className="navbar navbar-expand-sm bg-white navbar-light fixed-top">
         <div className="container-fluid">
-          <NavLink className="navbar-brand" to="/">{this.props.brand}</NavLink>
+          <NavLink className="navbar-brand" to="/">{this.brand}</NavLink>
           <button
             className="navbar-toggler navbar-light"
             type="button"
