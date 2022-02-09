@@ -19,7 +19,11 @@ class Footer extends Component {
         <footer className="py-1 bg-light fixed-bottom">
           <div className="container">
             <p className="m-0 text-center">
-              Copyright &copy; {this.brand} 2022. Version: {this.version}
+              {this.socialNetworks}
+              <br />
+              Copyright &copy; {this.brand} 2022.
+              <br />
+              Version: {this.version}
             </p>
           </div>
         </footer>

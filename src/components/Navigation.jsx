@@ -9,20 +9,14 @@ class Navigation extends Component {
     super(props);
 
     this.brand = props.navigationData.brand;
-    this.socialNetworks = props.navigationData.socialNetworks.map(function(socialNetwork, i){
-      return <div key={"outer-home-map" + i}>
-        <h4>
-          {socialNetwork.name}: <a href={socialNetwork.url} target="_blank">{socialNetwork.url}</a>
-        </h4>
-        </div>
-      });
+    this.socialNetworks = props.navigationData.socialNetworks;
   }
 
   render() {
     return (
       <nav className="navbar navbar-expand-sm bg-white navbar-light fixed-top">
         <div className="container-fluid">
-          <NavLink className="navbar-brand" to="/">{this.brand}</NavLink>
+          <div className="navbar-brand" to="/">{this.socialNetworks}</div>
           <button
             className="navbar-toggler navbar-light"
             type="button"

@@ -3,6 +3,10 @@ import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+faLinkedin, faGithub
+} from '@fortawesome/free-brands-svg-icons';
 
 import "./App.css";
 import {
@@ -59,28 +63,6 @@ class App extends Component {
   render() {
     const { data, isLoading } = this.state;
 
-    var systemData = {
-      "version": data.version,
-      "designed_by": data.designed_by,
-      "brand": data.brand
-    }
-
-    var footerData = {
-      "socialNetworks": data.social_networks,
-      "version": data.version,
-      "brand": data.brand
-    }
-
-    var contactsData = {
-      "contacts": data.contacts,
-      "socialNetworks": data.social_networks
-    }
-
-    var navigationData = {
-      "socialNetworks": data.social_networks,
-      "brand": data.brand,
-    }
-
     // Dirty hack
     if (isLoading) {
       return(
@@ -91,6 +73,41 @@ class App extends Component {
           </div>
         </div>
       )
+    }
+
+    var iconsMap = {
+      'linkedin': faLinkedin,
+      'github': faGithub
+    }
+
+   var socialNetworks = data.social_networks.map(function(socialNetwork, i){
+     return <span className="ms-4" key={"outer-navigation-map" + i}>
+         <a href={socialNetwork.url} target="_blank">
+           <FontAwesomeIcon icon={iconsMap[socialNetwork.brand]} />
+         </a>
+       </span>
+     });
+
+    var systemData = {
+      "version": data.version,
+      "designed_by": data.designed_by,
+      "brand": data.brand
+    }
+
+    var footerData = {
+      "socialNetworks": socialNetworks,
+      "version": data.version,
+      "brand": data.brand
+    }
+
+    var contactsData = {
+      "contacts": data.contacts,
+      "socialNetworks": socialNetworks
+    }
+
+    var navigationData = {
+      "socialNetworks": socialNetworks,
+      "brand": data.brand,
     }
 
     return(

@@ -11,7 +11,7 @@ class Home extends Component {
     this.profileImage = 'images/' + this.data.profile_image;
 
     this.experiences = this.data.experiences.map(function(experience, i) {
-      return <div className="border-bottom-1" key={"outer-home-map" + i}>
+      return <div key={"outer-home-map" + i}>
         <h3>{experience.name}</h3>
         <p className="info"><em className="date"> {experience.from} - {experience.to}</em></p>
         <h5>{experience.position}</h5>

@@ -11,13 +11,7 @@ class Contacts extends Component {
         </div>
       });
 
-    this.socialNetworks = props.contactsData.socialNetworks.map(function(socialNetwork, i){
-      return <div key={"outer-home-map" + i}>
-        <h4>
-          {socialNetwork.name}: <a href={socialNetwork.url} target="_blank">{socialNetwork.url}</a>
-        </h4>
-        </div>
-      });
+    this.socialNetworks = props.contactsData.socialNetworks;
   }
 
   render(){
