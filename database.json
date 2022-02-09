@@ -28,12 +28,12 @@
       {
         "name": "linkedin",
         "url": "https://www.linkedin.com/in/aiv",
-        "className": "fa fa-linkedin"
+        "brand": "linkedin"
       },
       {
         "name": "github",
         "url": "http://github.com/AivGitHub",
-        "className": "fa fa-github"
+        "brand": "github"
       }
     ],
     "experiences": [
