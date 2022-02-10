@@ -28,8 +28,8 @@ export default class About extends Component {
       <div className="main-container posts">
         <Container>
           <div>
-            <Row className="align-items-center my-5">
-              <Col className="col-lg-5">
+            <Row className="justify-content-md-center">
+              <Col className="col-md-auto content-background">
                 {this.about}
               </Col>
             </Row>

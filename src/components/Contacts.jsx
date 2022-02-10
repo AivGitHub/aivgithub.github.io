@@ -24,8 +24,8 @@ export default class Contacts extends Component {
     return (
       <div className="main-container contacts">
         <Container>
-          <Row>
-            <Col>
+          <Row className="justify-content-md-center">
+            <Col className="col-md-auto content-background">
               <h1 className="font-weight-light">Contacts:</h1>
               {this.contacts}
               <h1 className="font-weight-light">Social Networks:</h1>
