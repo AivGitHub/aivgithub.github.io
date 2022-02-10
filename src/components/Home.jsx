@@ -1,9 +1,15 @@
 import React, { Component } from "react";
 
+import {
+  Container,
+  Row,
+  Col,
+} from "react-bootstrap";
+
 import './Home.css';
 
 
-class Home extends Component {
+export default class Home extends Component {
   constructor(props) {
     super(props);
 
@@ -25,36 +31,32 @@ class Home extends Component {
   render() {
     return (
       <div className="main-container home">
-        <div className="container d-flex justify-content-center">
-          <div className="row">
-            <div className="row">
-              <div className="col">
+        <Container>
+            <Row>
+              <Col>
                 <div className="header-greetings">
                   <h1 className="font-size-44">Hello, I'm <span className="text-red">{this.data.name}</span></h1>
                   <p className="font-size-36">
                     {this.data.description}
                   </p>
                 </div>
-              </div>
-              <div className="col">
-              <img
-                className="img-fluid rounded-circle"
-                src={this.profileImage}
-                alt="Profile image"
-              />
-              </div>
-            </div>
-            <div className="row d-flex justify-content-center">
-              <div className="col">
+              </Col>
+              <Col>
+                <img
+                  className="img-fluid rounded-circle"
+                  src={this.profileImage}
+                  alt="Profile image"
+                />
+              </Col>
+            </Row>
+            <Row className="d-flex justify-content-center">
+              <Col>
                 <h2>My working experience:</h2>
                 {this.experiences}
-              </div>
-            </div>
-          </div>
-        </div>
+              </Col>
+            </Row>
+        </Container>
       </div>
     );
   }
 }
-
-export default Home;

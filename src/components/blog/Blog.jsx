@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { Outlet } from "react-router-dom";
 
+import { Container } from "react-bootstrap";
 
-class Blog extends Component {
+
+export default class Blog extends Component {
   constructor(props) {
     super(props);
   }
@@ -10,13 +12,11 @@ class Blog extends Component {
   render() {
     return (
       <div className="main-container blog">
-        <div className="container">
+        <Container>
           <h1 className="text-center mt-5">Blog page</h1>
           <Outlet />
-        </div>
+        </Container>
       </div>
     );
   }
 }
-
-export default Blog;

@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import './Navigation.css';
 
 
-class Navigation extends Component {
+export default class Navigation extends Component {
   constructor(props) {
     super(props);
 
@@ -52,5 +52,3 @@ class Navigation extends Component {
     );
   }
 }
-
-export default Navigation;

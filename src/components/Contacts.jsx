@@ -1,7 +1,13 @@
 import React, { Component } from "react";
 
+import {
+  Container,
+  Row,
+  Col
+} from "react-bootstrap";
 
-class Contacts extends Component {
+
+export default class Contacts extends Component {
   constructor(props) {
     super(props);
 
@@ -17,19 +23,17 @@ class Contacts extends Component {
   render(){
     return (
       <div className="main-container contacts">
-        <div className="container d-flex justify-content-center">
-          <div className="row">
-            <div className="col">
+        <Container>
+          <Row>
+            <Col>
               <h1 className="font-weight-light">Contacts:</h1>
               {this.contacts}
               <h1 className="font-weight-light">Social Networks:</h1>
               {this.socialNetworks}
-            </div>
-          </div>
-        </div>
+            </Col>
+          </Row>
+        </Container>
       </div>
     );
   }
 }
-
-export default Contacts;

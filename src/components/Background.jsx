@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import './Background.css';
 
 
-class Footer extends Component {
+export default class Footer extends Component {
   constructor(props) {
     super(props);
   }
@@ -15,5 +15,3 @@ class Footer extends Component {
     );
   }
 }
-
-export default Footer;

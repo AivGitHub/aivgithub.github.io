@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 
+import { Container } from "react-bootstrap";
+
 import './Footer.css';
 
 
-class Footer extends Component {
+export default class Footer extends Component {
   constructor(props) {
     super(props);
 
@@ -17,7 +19,7 @@ class Footer extends Component {
     return (
       <div className="footer">
         <footer className="py-1 bg-light fixed-bottom">
-          <div className="container">
+          <Container>
             <p className="m-0 text-center">
               {this.socialNetworks}
               <br />
@@ -25,11 +27,9 @@ class Footer extends Component {
               <br />
               Version: {this.version}
             </p>
-          </div>
+          </Container>
         </footer>
       </div>
     );
   }
 }
-
-export default Footer;

@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import { NavLink } from "react-router-dom";
 
+import {
+  Container,
+  Row,
+  Col
+} from "react-bootstrap";
 
-class About extends Component {
+
+export default class About extends Component {
   constructor(props) {
     super(props);
 
@@ -20,17 +26,15 @@ class About extends Component {
 
     return(
       <div className="main-container posts">
-        <div className="container">
+        <Container>
           <div>
-            <div className="row align-items-center my-5">
-              <div className="col-lg-5">
+            <Row className="align-items-center my-5">
+              <Col className="col-lg-5">
                 {this.about}
-              </div>
-            </div>
+              </Col>
+            </Row>
           </div>
-        </div>
+        </Container>
       </div>
   )};
 }
-
-export default About;

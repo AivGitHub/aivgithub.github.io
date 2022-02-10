@@ -1,6 +1,8 @@
 import React, { useEffect, Component } from "react";
 import { withRouter, useParams } from "react-router";
 
+import { Container } from "react-bootstrap";
+
 
 // Dirty hack. Again
 function withParams(Component) {
@@ -18,13 +20,13 @@ class Post extends Component {
   render() {
     return (
       <div className="main-container post">
-        <div className="container">
+        <Container>
           <h1 className="mt-5">Post Title</h1>
           <h6 className="mb-5">The post slug is, {this.slug}</h6>
           <p>
             Full post content
           </p>
-        </div>
+        </Container>
       </div>
     );
   }
