@@ -22,7 +22,7 @@ export default class Home extends Component {
     this.experiences = this.data.experiences.map(function(experience, i) {
 
       // TODO: Think about any other solutions
-      if (i == experiencesLength - 1) {
+      if (i === experiencesLength - 1) {
         borderBottom = "";
       }
 
@@ -41,6 +41,7 @@ export default class Home extends Component {
     return (
       <div className="main-container home">
         <Container>
+
             <Row>
               <Col>
                 <div className="header-greetings">
@@ -58,6 +59,7 @@ export default class Home extends Component {
                 />
               </Col>
             </Row>
+
             <Row className="justify-content-md-center mt-5">
               <Col className="col-md-auto content-background">
                 <h2 className="font-size-36">My working experience:</h2>

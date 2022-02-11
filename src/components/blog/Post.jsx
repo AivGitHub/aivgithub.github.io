@@ -1,5 +1,5 @@
-import React, { useEffect, Component } from "react";
-import { withRouter, useParams } from "react-router";
+import React, { Component } from "react";
+import { useParams } from "react-router";
 
 import { Container } from "react-bootstrap";
 

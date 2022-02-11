@@ -18,7 +18,7 @@ export default class Footer extends Component {
   render() {
     return (
       <div className="footer">
-        <footer className="py-1 bg-light fixed-bottom">
+        <footer className="py-1 bg-white bg-light fixed-bottom">
           <Container>
             <p className="m-0 text-center">
               {this.socialNetworks}
